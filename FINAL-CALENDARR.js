@@ -1,5 +1,5 @@
 // Create a function to generate and append the HTML content and CSS to the DOM
-function createCalendar() {
+function createCalendar(b) {
     const htmlContent =`
         <!DOCTYPE html>
         <html lang="en" dir="ltr">
