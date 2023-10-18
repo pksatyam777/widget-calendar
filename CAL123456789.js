@@ -177,8 +177,14 @@ function JScript(bgcolor,activecolor="pink"){
     var body = document.getElementsByTagName("body")[0];
     body.style.backgroundColor = bgcolor;
     
-    var activeDates = document.getElementsByClassName('.calendar-dates li.active::before');
-    if(activeDates){activeDates.style.backgroundColor= activecolor;}
+    var styleElement = document.createElement('style');
+    document.head.appendChild(styleElement);
+
+    // Define the CSS rule to change the background color
+    var newRule = `.calendar-dates li.active::before { background: ${activecolor} !important; }`; // Change to your desired color
+
+    // Add the rule to the style element's stylesheet
+    styleElement.sheet.insertRule(newRule, 0);
     
     // Change the background color of the ::before pseudo-element
 
