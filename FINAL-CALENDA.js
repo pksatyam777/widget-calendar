@@ -1,5 +1,5 @@
 // Create a function to generate and append the HTML content and CSS to the DOM
-function createCalendar(bgcolor) {
+function createCalendar() {
     const htmlContent =`
         <!DOCTYPE html>
         <html lang="en" dir="ltr">
@@ -48,7 +48,7 @@ function createCalendar(bgcolor) {
  
             body {
                 display: flex;
-                background: ${bgcolor};
+                background: lightgreen;
                 min-height: 100vh;
                 padding: 0 10px;
                 align-items: center;
@@ -169,7 +169,7 @@ function createCalendar(bgcolor) {
     // Append the content to the document's body
     document.body.appendChild(container);
 }
-
+createCalendar()
 // Call the function to generate and append the HTML content and CSS
 
 // Add the provided JavaScript code
