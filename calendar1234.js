@@ -131,6 +131,7 @@
 
     // Create the calendar
     function createCalendar(container, color) {
+        console.log("hello")
         // Get the current date
         var today = new Date();
         var currentMonth = today.getMonth();
