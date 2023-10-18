@@ -48,7 +48,7 @@ function createCalendar(bgcolor) {
  
             body {
                 display: flex;
-                background: blue;
+                background: ${bgcolor};
                 min-height: 100vh;
                 padding: 0 10px;
                 align-items: center;
@@ -171,13 +171,9 @@ function createCalendar(bgcolor) {
 }
 
 // Call the function to generate and append the HTML content and CSS
-createCalendar();
-// Add the provided JavaScript code
-// Select the element by its ID
-const container = document.getElementById("calendar-container");
 
-// Change the background color to red
-container.style.backgroundColor = bgcolor;
+// Add the provided JavaScript code
+
 let date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth();
