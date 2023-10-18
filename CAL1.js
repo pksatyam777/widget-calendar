@@ -184,7 +184,7 @@ function JScript(bgcolor,activecolor){
     activeDates.forEach(function (date) {
         var beforePseudoElement = date.querySelector('::before');
         if (beforePseudoElement) {
-            beforePseudoElement.style.backgroundColor = activecolor; // Change the color to your desired color
+            beforePseudoElement.style.backgroundColor = "black"; // Change the color to your desired color
         }
     })
     }
