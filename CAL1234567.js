@@ -152,7 +152,7 @@ function createCalendar() {
                 transform: translate(-50%, -50%);
             }
              .calendar-dates li.active::before {
-                background: ${activecolor};
+                background: #6332C5;
             }
             
  
