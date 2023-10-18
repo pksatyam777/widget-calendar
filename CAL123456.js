@@ -173,12 +173,12 @@ createCalendar()
 // Call the function to generate and append the HTML content and CSS
 
 // Add the provided JavaScript code
-function JScript(bgcolor,activecolor){
+function JScript(bgcolor){
     var body = document.getElementsByTagName("body")[0];
     body.style.backgroundColor = bgcolor;
     
-    var activeDates = document.getElementsByClassName('.calendar-dates li.active::before');
-    activeDates.style.backgroundColor= activecolor;
+    // var activeDates = document.getElementsByClassName('.calendar-dates li.active::before');
+    // activeDates.style.backgroundColor= activecolor;
     // Change the background color of the ::before pseudo-element
 
 
