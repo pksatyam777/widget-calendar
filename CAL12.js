@@ -180,14 +180,14 @@ function JScript(bgcolor,activecolor){
     var activeDates = document.querySelectorAll('.calendar-dates li.active');
 
     // Change the background color of the ::before pseudo-element
-    if(activeDates){
-    activeDates.forEach(function (date) {
-        var beforePseudoElement = date.querySelector('::before');
-        if (beforePseudoElement) {
-            beforePseudoElement.style.backgroundColor = "black"; // Change the color to your desired color
-        }
-    })
-    }
+var style = document.createElement('style');
+style.innerHTML = `
+  .calendar-dates li.active::before {
+    background: ${activecolor};
+  }
+`;
+document.head.appendChild(style);
+
 let date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth();
