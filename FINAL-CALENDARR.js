@@ -48,7 +48,7 @@ function createCalendar(bgcolor) {
  
             body {
                 display: flex;
-                background: ${bgcolor};
+                background: bgcolor;
                 min-height: 100vh;
                 padding: 0 10px;
                 align-items: center;
