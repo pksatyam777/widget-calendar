@@ -151,7 +151,9 @@ function createCalendar() {
                 border-radius: 50%;
                 transform: translate(-50%, -50%);
             }
- 
+             .calendar-dates li.active::before {
+                background: #6332c5;
+            }
             
  
             .calendar-dates li:not(.active):hover::before {
@@ -174,15 +176,18 @@ createCalendar()
 function JScript(bgcolor,activecolor){
     var body = document.getElementsByTagName("body")[0];
     body.style.backgroundColor = bgcolor;
+    
     var activeDates = document.querySelectorAll('.calendar-dates li.active');
 
     // Change the background color of the ::before pseudo-element
+    if(activeDates){
     activeDates.forEach(function (date) {
         var beforePseudoElement = date.querySelector('::before');
         if (beforePseudoElement) {
             beforePseudoElement.style.backgroundColor = activecolor; // Change the color to your desired color
         }
-    });
+    })
+    }
 let date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth();
