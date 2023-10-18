@@ -1,5 +1,5 @@
 // Create a function to generate and append the HTML content and CSS to the DOM
-function createCalendar() {
+function createCalendar(activecolor="red") {
     const htmlContent =`
         <!DOCTYPE html>
         <html lang="en" dir="ltr">
@@ -152,7 +152,7 @@ function createCalendar() {
                 transform: translate(-50%, -50%);
             }
              .calendar-dates li.active::before {
-                background: #6332c5;
+                background: ${activecolor};
             }
             
  
@@ -173,21 +173,15 @@ createCalendar()
 // Call the function to generate and append the HTML content and CSS
 
 // Add the provided JavaScript code
-function JScript(bgcolor,activecolor){
+function JScript(bgcolor){
     var body = document.getElementsByTagName("body")[0];
     body.style.backgroundColor = bgcolor;
     
     var activeDates = document.querySelectorAll('.calendar-dates li.active');
 
     // Change the background color of the ::before pseudo-element
-var style = document.createElement('style');
-style.innerHTML = `
-  .calendar-dates li.active::before {
-    background: ${activecolor};
-  }
-`;
-document.head.appendChild(style);
 
+createCalendar("green")
 let date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth();
