@@ -181,7 +181,7 @@ function JScript(bgcolor,activecolor){
     activeDates.style.backgroundColor= activecolor;
     // Change the background color of the ::before pseudo-element
 
-createCalendar("green")
+
 let date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth();
